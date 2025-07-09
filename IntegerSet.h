@@ -27,6 +27,7 @@ public:
     IntegerSet(const int array[], int arraySize);
 private:
     std::vector<bool> set;
+    static const int SIZE = 101;
 };
 
 #endif
