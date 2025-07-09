@@ -61,12 +61,29 @@ void IntegerSet::deleteElement(int m)
 
 void IntegerSet::printSet() const
 {
-
+    bool isEmpty = true;
+    cout << "{ ";
+    for (int i = 0; i < SIZE; i++)
+    {
+        if (set[i])
+        {
+            cout << i << " ";
+            isEmpty = false;
+        }
+    }
+    if (isEmpty)
+        cout << "--";
+    cout << " }";
 }
 
 bool IntegerSet::isEqualTo(const IntegerSet &set2) const
 {
-
+    for (int i = 0; i < SIZE; i++)
+    {
+        if (this->set[i] != set2.set[i])
+            return false;
+    }
+    return true;
 }
 
 void IntegerSet::inputSet()
